@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#075EEC" />
+  <title>Mir Kiryana Shop</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+  <div class="app">
+    <div class="header">Mir Kiryana Shop</div>
+    <div class="summary">
+      <div>You Will Give <span id="willGive">₹0</span></div>
+      <div>You Will Get <span id="willGet">₹0</span></div>
+    </div>
+    <div class="customer-list" id="customerList"></div>
+    <button onclick="addCustomerPrompt()" class="add-btn">+ Add Customer</button>
+  </div>
+
+  <div class="modal" id="entryModal">
+    <div class="modal-content">
+      <h2 id="modalTitle">Add Entry</h2>
+      <input id="amountInput" type="number" placeholder="₹ Amount" />
+      <input id="noteInput" type="text" placeholder="Note" />
+      <input id="dateInput" type="date" />
+      <button onclick="saveEntry('gave')" class="btn red">You Gave ₹</button>
+      <button onclick="saveEntry('got')" class="btn green">You Got ₹</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
